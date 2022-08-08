@@ -1,0 +1,21 @@
+{
+  "name": "structural",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^3.10.0",
+    "graphql": "^16.5.0",
+    "graphql-scalars": "^1.17.0",
+    "jest": "^28.1.3",
+    "mongoose": "^6.5.1",
+    "nodemon": "^2.0.19"
+  }
+}
