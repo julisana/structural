@@ -8,6 +8,7 @@
 ## Running the Application
 - Run `npm start` to start up the application itself.
 - The system is listening on port 5000. To view the sandbox, go to `http://localhost:5000`
+    - Note: The system saves data to a MongoDB database that lives in Atlas, so changes made via the API will persist between sessions
 
 ## Running Tests
 - Start with `node node_modules/serverless/bin/serverless.js mongodb start`. The MongoDB service will be running on port 12345.
@@ -35,6 +36,9 @@ Ran all test suites.
 
 ### Example Queries
 #### Departments
+Search Field Options: `id`, `name`. You can use one/both values, though they query as an AND rather than an OR.
+You can also limit the number of results using `limit`
+
 Query:
 ```graphql
 query Departments {
@@ -200,6 +204,9 @@ Results:
 ```
 
 #### People
+Search Field Options: `id`, `firstName`, `lastName`, `jobTitle`, `managerId`, `departmentId`. You can use one/some/all values, though they query as an AND rather than an OR.
+You can also limit the number of results using `limit`
+
 Query:
 ```graphql
 query People {
@@ -404,6 +411,15 @@ Before:
   }
 }
 ```
+
+Fillable Fields:
+- firstName
+- lastName
+- jobTitle
+- departmentId
+- managerId
+
+(Since this is an update-only mutation, `id` is not included in this list)
 
 Query:
 ```graphql
