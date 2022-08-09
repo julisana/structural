@@ -1,4 +1,4 @@
-[
+module.exports = [
   {
     "name": "Engineering",
     "id": "920a774e-617a-4a5b-82ea-8205c18eef75"

@@ -1,0 +1,13 @@
+service: mongodb
+provider:
+  name: aws
+  runtime: nodejs12.x
+integretion:
+plugins:
+  - serverless-mongodb-local
+custom:
+  mongodb:
+    instance: # MongoMemoryServer() options and defaults https://github.com/nodkz/mongodb-memory-server#available-options-for-mongomemoryserver
+      port: 12345
+      dbPath: ./db
+      storageEngine: wiredTiger # Set with `dbPath` to persists the database between instantiations

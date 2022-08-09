@@ -1,4 +1,4 @@
-[
+module.exports = [
   {
     "id": "2798c35b-5b8f-4a5d-9858-0a818d48cbef",
     "firstName": "Orval",
